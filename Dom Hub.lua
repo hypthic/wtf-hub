@@ -1,5 +1,4 @@
-local source = game:HttpGet("https://raw.githubusercontent.com/hdanhhub/hdanhhub/refs/heads/main/Fix-Lag.lua.txt")
-loadstring(source)()
+
 --[[
     Abacaxi Hub - Optimized Version
     Performance & Code Quality Improvements
