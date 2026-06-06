@@ -1,4 +1,3 @@
-
 --[[
     Abacaxi Hub - Optimized Version
     Performance & Code Quality Improvements
