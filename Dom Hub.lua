@@ -2713,7 +2713,7 @@ Discord:AddDiscordInvite({
     Name = "Dom Hub",
     Description = "no join = cool",
     Logo = "rbxassetid://3025004408",
-    Invite = "https://discord.gg/"
+    Invite = "https://discord.gg/beluga"
 })
 local credits = Discord:AddParagraph({
     Title = "Credits For Someone Peoples",
