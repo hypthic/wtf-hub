@@ -1,9 +1,3 @@
---[[
-    Abacaxi Hub - Optimized Version
-    Performance & Code Quality Improvements
-]]
-
--- Cache all services at start for better performance
 local Services = setmetatable({}, {
     __index = function(self, serviceName)
         local service = game:GetService(serviceName)
