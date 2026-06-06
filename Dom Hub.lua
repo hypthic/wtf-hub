@@ -98,13 +98,13 @@ local function NotificacaoNightMystic(titulo, mensagem)
     end
 end
 
-NotificacaoNightMystic("Skull Hub", "Script loaded successfully!")
+NotificacaoNightMystic("Dom Hub", "Script loaded successfully!")
 
 -- ========================================
 -- SAVE SYSTEM (Optimized)
 -- ========================================
 local HttpService = Services.HttpService
-local FolderName = "Skull Hub"
+local FolderName = "Dom Hub"
 local FileName = "Settings.json"
 local FullPath = FolderName .. "/" .. FileName
 
@@ -2555,8 +2555,8 @@ QuestNeta = function()
 		};
 	end;
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/VTDROBLOX/Animehub/refs/heads/main/ui_tay.txt"))():MakeWindow({
-    Title = "Skull Hub",
-    SubTitle = "by Khánh depzai",
+    Title = "Dom Hub",
+    SubTitle = "by Dom",
     SaveFolder = "Maça.json"
 })
 -- Criar ScreenGui
@@ -2568,7 +2568,7 @@ screenGui.Parent = game.CoreGui
 local imageButton = Instance.new("ImageButton")
 imageButton.Size = UDim2.new(0, 50, 0, 50)
 imageButton.Position = UDim2.new(0.15, 0, 0.15, 0)
-imageButton.Image = "rbxassetid://91222518412026"
+imageButton.Image = "rbxassetid://133083240945237"
 imageButton.BackgroundTransparency = 1
 imageButton.Parent = screenGui
 
@@ -2710,16 +2710,16 @@ local Setting = Library:MakeTab({
     Icon = "rbxassetid://7734053495"
 })
 Discord:AddDiscordInvite({
-    Name = "Skull Hub",
-    Description = "vào sever ngay không = GAY",
+    Name = "Dom Hub",
+    Description = "no join = cool",
     Logo = "rbxassetid://3025004408",
-    Invite = "https://discord.gg/287EAB3d5"
+    Invite = "https://discord.gg/beluga"
 })
 local credits = Discord:AddParagraph({
     Title = "Credits For Someone Peoples",
     Desc = ""
 })
-credits:SetDesc("nigth mystic, astral, tboy kiddo etc,khanh depzai ")
+credits:SetDesc("dom")
 
 Shop:AddSection("Fighting Shop")
 Shop:AddButton({
@@ -12113,20 +12113,20 @@ Setting:AddToggle({
 Setting:AddSection({"⚡ Ultra Optimizer v5.0"});
 
 Setting:AddButton({
-    Name = "🚀 Ultra Optimize (Tất Cả)",
-    Description = "Chạy toàn bộ: xóa hiệu ứng, dọn RAM, giảm render, tắt shadow",
+    Name = "🚀 Ultra Optimize (Everything)",
+    Description = "Run all: remove effects, clean RAM, reduce rendering, disable shadows",
     Callback = function()
         LowCpu()
-        NotificacaoNightMystic("Skull Hub", "✅ Ultra Optimizer đã kích hoạt!")
+        NotificacaoNightMystic("Dom Hub", "✅ Ultra Optimizer has been activated!")
     end
 });
 
 Setting:AddButton({
-    Name = "🧹 Dọn RAM Ngay",
-    Description = "Xóa rác, dead enemies, collectgarbage",
+    Name = "🧹 Clean RAM Now",
+    Description = "Remove junk, dead enemies, run collectgarbage",
     Callback = function()
         pcall(function()
-            -- Xóa dead enemies
+            -- Remove dead enemies
             for _, enemy in ipairs(workspace.Enemies:GetChildren()) do
                 local hum = enemy:FindFirstChildOfClass("Humanoid")
                 if hum and hum.Health <= 0 then
@@ -12136,13 +12136,13 @@ Setting:AddButton({
         end)
         pcall(function() collectgarbage("collect") end)
         pcall(function() collectgarbage() end)
-        NotificacaoNightMystic("Skull Hub", "🧹 RAM đã được dọn sạch!")
+        NotificacaoNightMystic("Dom Hub", "🧹 RAM has been cleaned!")
     end
 });
 
 Setting:AddButton({
-    Name = "✨ Xóa Hiệu Ứng NPC",
-    Description = "Tắt particles, fire, smoke, trail trên Enemies",
+    Name = "✨ Remove NPC Effects",
+    Description = "Disable particles, fire, smoke, and trails on enemies",
     Callback = function()
         pcall(function()
             local function CleanFolder(folder)
@@ -12164,13 +12164,13 @@ Setting:AddButton({
             CleanFolder(workspace:FindFirstChild("Characters"))
             CleanFolder(workspace:FindFirstChild("SeaBeasts"))
         end)
-        NotificacaoNightMystic("Skull Hub", "✨ Đã xóa hiệu ứng NPC!")
+        NotificacaoNightMystic("Dom Hub", "✨ NPC effects have been removed!")
     end
 });
 
 Setting:AddButton({
-    Name = "🌑 Tắt Shadow Toàn Map",
-    Description = "Chunked — tắt CastShadow trên Map, giảm GPU mạnh",
+    Name = "🌑 Disable Shadows Across the Entire Map",
+    Description = "Chunked — disable CastShadow on the map, greatly reduces GPU usage",
     Callback = function()
         task.spawn(function()
             pcall(function()
@@ -12191,12 +12191,11 @@ Setting:AddButton({
                 end
             end)
         end)
-        NotificacaoNightMystic("Skull Hub", "🌑 Đang tắt shadow toàn map...")
+        NotificacaoNightMystic("Dom Hub", "🌑 Shadows are now disabled across the map...")
     end
 });
-
 Setting:AddButton({
-    Name = "💡 Tắt Post-Processing (Lighting)",
+    Name = "💡 Turn off Post-Processing (Lighting)",
     Description = "Xóa Blur, Bloom, SunRays, ColorCorrection, Fog, Atmosphere",
     Callback = function()
         pcall(function()
@@ -12213,25 +12212,26 @@ Setting:AddButton({
             L.FogStart = 9e9
             L.Brightness = 2
         end)
-        NotificacaoNightMystic("Skull Hub", "💡 Đã xóa post-processing!")
+        NotificacaoNightMystic("Dom Hub", "💡 Deleted post-processing!")
     end
 });
 
 Setting:AddButton({
     Name = "🎮 Render Quality Level 1",
-    Description = "Ép render quality xuống thấp nhất",
+    Description = "Force render quality to the lowest level.",
     Callback = function()
         pcall(function() settings().Rendering.QualityLevel = "Level01" end)
         pcall(function()
             UserSettings():GetService("UserGameSettings").SavedQualityLevel = Enum.SavedQualitySetting.QualityLevel01
         end)
-        NotificacaoNightMystic("Skull Hub", "🎮 Render Quality → Level 1!")
+        NotificacaoNightMystic("Dom Hub", "🎮 Render Quality → Level 1!")
     end
 });
 
 Setting:AddToggle({
-    Name = "🔄 Auto Dọn RAM (mỗi 30s)",
-    Description = "Tự động dọn rác + dead enemies mỗi 30 giây",
+    Name = "🔄 Automatic RAM cleanup (every 30 seconds)",
+    Description = "
+Automatically cleans up trash and dead enemies every 30 seconds.",
     Default = false,
     Callback = function(val)
         _G.AutoRAMLoop = val
@@ -12250,16 +12250,16 @@ Setting:AddToggle({
                     pcall(function() collectgarbage() end)
                 end
             end)
-            NotificacaoNightMystic("Skull Hub", "🔄 Auto RAM Clean: BẬT")
+            NotificacaoNightMystic("Dom Hub", "🔄 Auto RAM Clean: ON")
         else
-            NotificacaoNightMystic("Skull Hub", "🔄 Auto RAM Clean: TẮT")
+            NotificacaoNightMystic("Dom Hub", "🔄 Auto RAM Clean: TURN OFF")
         end
     end
 });
 
 Setting:AddButton({
     Name = "📺 Stretch Screen (0.65)",
-    Description = "Thu màn hình dọc để tăng FPS",
+    Description = "Reduce the vertical screen size to increase FPS",
     Callback = function()
         getgenv().Resolution = { [".gg/scripters"] = 0.65 }
         local Camera = workspace.CurrentCamera
@@ -12271,7 +12271,7 @@ Setting:AddButton({
             end)
         end
         getgenv().gg_scripters = "Aori0001"
-        NotificacaoNightMystic("Skull Hub", "📺 Stretch Screen đã bật!")
+        NotificacaoNightMystic("Dom Hub", "📺 Stretch Screen It's on!")
     end
 });
 local V5 = game.Players.LocalPlayer;
@@ -12394,7 +12394,7 @@ end)
 _ENV.rz_FastAttack = FastAttack
 FastAttackModule.FastAttack = FastAttack
 
-NotificacaoNightMystic("Skull Hub", "👋 Chào mừng đến với Skull Hub (Freemium)")
+NotificacaoNightMystic("Dom Hub", "👋 Welcome to Dom Hub (Freemium)")
 
 -- FastAttackModule loaded
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Teddyseetink/Haidepzai/refs/heads/main/notify"))()
